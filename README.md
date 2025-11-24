@@ -38,4 +38,3 @@ The goal of this project is to enhance my understanding of layout techniques, vi
 
 ## 👤 Author
 **Mohamed Hesham**  
-💬 “Learning by building — every project takes me one step closer.”
