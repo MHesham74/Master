@@ -839,6 +839,7 @@ li a , a{
   top: 0;
   height: 100%;
   background-color: var(--main-color);
+  transition: width 1.5s ease-in-out;
 }
 /* work-steps */
 .work-steps {
