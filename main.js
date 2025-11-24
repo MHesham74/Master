@@ -1,11 +1,34 @@
 let progressSpans = document.querySelectorAll(".the-progress span");
 let section = document.querySelector(".our-skills");
+let started = false;
+
+let nums = document.querySelectorAll(".stats .box .number");
+let statsSection = document.querySelector(".stats");
+
+function startCount(element){
+    let goal = element.dataset.goal;
+    let count = setInterval(() =>{
+        element.textContent++;
+        if(element.textContent == goal){
+            clearInterval(count);
+        }
+    }, 2000 / goal);
+}
 
 window.onscroll = function (){
     if (window.scrollY >= section.offsetTop - 250) {
         progressSpans.forEach((span) => {
         span.style.width = span.dataset.width;
         });
+    }
+
+    if(window.scrollY >=  statsSection.offsetTop - 250){
+        if(!started){
+            nums.forEach((num) =>{
+                startCount(num);
+            });
+        }
+        started = true;
     }
 };
 
